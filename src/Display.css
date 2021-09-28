@@ -1,0 +1,65 @@
+
+.outer__div{
+    width: 100%;
+    height: max-content;
+    position: relative;
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 10px;
+    
+}
+.inner__div{
+   display:flex;
+   justify-content: space-between;
+   align-items: center;
+    
+}
+.check{
+    display: flex;
+    justify-content: space-between;
+}
+.check__in{
+    display: flex;
+    flex-direction: column;
+}
+.disabled{
+    pointer-events: none;
+    opacity: 0.5;
+
+}
+.play{
+    border: 1px solid black;
+}
+.playerss{
+    background-color: aquamarine;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+.play__button{
+    display: flex;
+    justify-content: space-around;
+  
+}
+.btn__add,.btn__matches{
+    border-radius:5px ;
+    padding: 20px;
+    background-color:blue;
+    width: 200px;
+    color:white;
+    font-size: 20px;
+
+}
+.btn__matches{
+    background-color:green;
+}
+.matches{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    border: 1px solid black;
+    align-items: center;
+}
+
+
+

@@ -62,3 +62,35 @@
     at processTicksAndRejections (node:internal/process/task_queues:96:5)
 [error] 
 [error] Error: An unexpected error has occurred.
+[debug] [2021-09-28T15:54:44.753Z] ----------------------------------------------------------------------
+[debug] [2021-09-28T15:54:44.760Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\yathi\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2021-09-28T15:54:44.761Z] CLI Version:   8.11.2
+[debug] [2021-09-28T15:54:44.762Z] Platform:      win32
+[debug] [2021-09-28T15:54:44.762Z] Node Version:  v16.8.0
+[debug] [2021-09-28T15:54:44.883Z] Time:          Tue Sep 28 2021 21:24:44 GMT+0530 (India Standard Time)
+[debug] [2021-09-28T15:54:44.884Z] ----------------------------------------------------------------------
+[debug] [2021-09-28T15:54:44.885Z] 
+[debug] [2021-09-28T15:54:44.949Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-09-28T15:54:44.951Z] > authorizing via signed-in user
+[debug] [2021-09-28T15:54:44.952Z] [iam] checking project fantasy-cricket-c8906 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-09-28T15:54:44.989Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/fantasy-cricket-c8906:testIamPermissions  
+ {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-09-28T15:54:47.115Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 28 Sep 2021 15:54:46 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1181","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-09-28T15:54:47.122Z] >>> HTTP REQUEST POST https://iam.googleapis.com/v1/projects/fantasy-cricket-c8906/serviceAccounts/fantasy-cricket-c8906@appspot.gserviceaccount.com:testIamPermissions  
+ {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2021-09-28T15:54:48.819Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 28 Sep 2021 15:54:48 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-09-28T15:54:48.823Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/fantasy-cricket-c8906  
+ 
+[debug] [2021-09-28T15:54:49.743Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 28 Sep 2021 15:54:48 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-09-28T15:54:49.745Z] [WARNING] Unable to fetch default resources. Falling back to project id (fantasy-cricket-c8906)
+[debug] [2021-09-28T15:54:50.280Z] TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Received undefined
+    at new NodeError (node:internal/errors:371:5)
+    at validateString (node:internal/validators:119:11)
+    at Object.join (node:path:429:7)
+    at Object.checkFunctionsSDKVersion [as fn] (C:\Users\yathi\AppData\Roaming\npm\node_modules\firebase-tools\lib\checkFirebaseSDKVersion.js:34:28)
+    at Command.<anonymous> (C:\Users\yathi\AppData\Roaming\npm\node_modules\firebase-tools\lib\command.js:164:30)
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\yathi\AppData\Roaming\npm\node_modules\firebase-tools\lib\command.js:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: An unexpected error has occurred.

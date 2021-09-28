@@ -5,7 +5,6 @@ const authaxios=axios.create({
   baseURL:apiurl,
   headers:{
     "Authorization" : `Bearer ${accesstoken}`,
-    'Access-Control-Allow-Headers': 'x-access-token',
     "x-access-token": accesstoken
   }
 });

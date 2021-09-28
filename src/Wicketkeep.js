@@ -27,9 +27,6 @@ function Wicketkeep({id,name,logo,points,credits}) {
         })
       
     }
-    
-    
-   
    
     return (
         <div className="bowlers">

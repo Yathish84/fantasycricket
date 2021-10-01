@@ -1,12 +1,12 @@
 import React, { useEffect, useState, } from "react";
 import {BrowserRouter as Router, Switch , Route} from 'react-router-dom'
-import Home from "./Home"
+import Home from "./Components/Home"
 import './App.css';
-import Playerchoose from "./Playerchoose";
-import authaxios from './Authaxios'
-import Captionselection from './Captionselection'
-import Mysquad from './Mysquad'
-import Mymatches from './Mymatches'
+import Playerchoose from "./Pages/Playerchoose";
+import authaxios from './Authentication/Authaxios'
+import Captionselection from './Pages/Captionselection'
+import Mysquad from './Pages/Mysquad'
+import Mymatches from './Pages/Mymatches'
 function App() {
   const [dataa,setData]= useState([])
     useEffect(async()=>{

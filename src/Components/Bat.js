@@ -1,20 +1,25 @@
-import React from 'react'
-import {useStateValue} from "./StateProvider"
-import './Bowlers.css'
+import React,{useState} from 'react'
+import {useStateValue} from "../StateProvider"
+import '../Styles/Bowlers.css'
 
-function Wicketkeep({id,name,logo,points,credits}) {
-    const [{wicketkeeperss},dispatch]=useStateValue()
-    const pd = ()=>{
+function Bat({id,name,logo,points,credits}) {
+    const [{batss},dispatch]=useStateValue()
+    const[disabled,setDisabled]=useState(true)
+  
+    const pd=()=>{
+        
         dispatch({
-            type:'ADD_WICKETKEEPERS',
-            wicketkeeperss:{
+            type:'ADD_BATS',
+            batss:{
                 id:id,
                 name:name,
                 logo:logo,
                 points:points,
                 credits:credits
+                
             },
         })
+
         dispatch({
             type:'ADD_PLAYERS',
             playerdetails:{
@@ -25,12 +30,13 @@ function Wicketkeep({id,name,logo,points,credits}) {
                 credits:credits
             },
         })
-      
     }
+    
+   
    
     return (
-        <div className="bowlers">
-        <div className={wicketkeeperss.length>=5 ? "disabled":"bowlers__left"} onClick={pd}>
+        <div className="bowlers" >
+        <div className={batss.length>=7 ? "disabled":"bowlers__left"} onClick={pd} disabled={disabled} >
             <div>
             <img src={logo} alt="" width="20" height="20"/>
             </div>
@@ -48,4 +54,4 @@ function Wicketkeep({id,name,logo,points,credits}) {
     )
 }
 
-export default Wicketkeep
+export default Bat

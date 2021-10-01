@@ -1,15 +1,14 @@
 import React,{useEffect,useState} from 'react'
-import {useStateValue} from "./StateProvider"
-import Final from "./Final"
-import './Tabs.css'
-import {onSnapshot, collection, getDocs } from "firebase/firestore"; 
-import {db} from './firebase';
-import Playermain from './Playermain';
+import {useStateValue} from "../StateProvider"
+import '../Styles/Tabs.css'
+import {onSnapshot, collection } from "firebase/firestore"; 
+import {db} from '../firebase';
+import Playermain from '../Components/Playermain';
 import {useHistory} from 'react-router-dom'
 
 
 function Mysquad() {
-    const[{players,squad,captains},dispatch]=useStateValue()
+    const[{players},dispatch]=useStateValue()
     const [firebasedata,setFirebasedata]=useState([])
     const [matchesdata,setMatchesdata]=useState([])
     
@@ -30,7 +29,9 @@ function Mysquad() {
     const handlematches = ()=>{
         history.push('/matches')
     }
-    
+    players.map((x)=>{
+        console.log(x)
+    })
   
     return (
         <div>

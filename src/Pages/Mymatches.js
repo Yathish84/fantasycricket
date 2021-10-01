@@ -1,7 +1,7 @@
 import React,{useEffect,useState} from 'react'
-import {onSnapshot, collection, getDocs } from "firebase/firestore"; 
-import {db} from './firebase';
-import Displaymatches from './Displaymatches';
+import {onSnapshot, collection} from "firebase/firestore"; 
+import {db} from '../firebase';
+import Displaymatches from '../Components/Displaymatches';
 import {useHistory} from 'react-router-dom'
 
 function Mymatches() {

@@ -1,25 +1,20 @@
-import React,{useState} from 'react'
-import {useStateValue} from "./StateProvider"
-import './Bowlers.css'
+import React from 'react'
+import {useStateValue} from '../StateProvider'
+import '../Styles/Bowlers.css'
 
-function Bat({id,name,logo,points,credits}) {
-    const [{batss},dispatch]=useStateValue()
-    const[disabled,setDisabled]=useState(true)
-  
+function Allround({id,name,logo,points,credits}) {
+    const [{allrounderss},dispatch]=useStateValue()
     const pd=()=>{
-        
         dispatch({
-            type:'ADD_BATS',
-            batss:{
+            type:'ADD_ALLROUNDERS',
+            allrounderss:{
                 id:id,
                 name:name,
                 logo:logo,
                 points:points,
                 credits:credits
-                
             },
         })
-
         dispatch({
             type:'ADD_PLAYERS',
             playerdetails:{
@@ -31,12 +26,9 @@ function Bat({id,name,logo,points,credits}) {
             },
         })
     }
-    
-   
-   
     return (
-        <div className="bowlers" >
-        <div className={batss.length>=7 ? "disabled":"bowlers__left"} onClick={pd} disabled={disabled} >
+        <div className="bowlers">
+        <div className={allrounderss.length>=4 ? "disabled":"bowlers__left"} onClick={pd}>
             <div>
             <img src={logo} alt="" width="20" height="20"/>
             </div>
@@ -54,4 +46,4 @@ function Bat({id,name,logo,points,credits}) {
     )
 }
 
-export default Bat
+export default Allround

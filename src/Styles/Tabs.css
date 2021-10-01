@@ -92,11 +92,9 @@
     width: 100%;
     padding: 15px;
     margin-top:10px;
-   
     font-weight: bold;
     font-size:18px;
     color:white;
-   
     border-radius:5px;
   }
   .btn{
@@ -124,6 +122,21 @@
     opacity: 0.5;
   }
   .btn__disabled{
-    background-color:grey;
-    opacity: 0.8;
+    pointer-events: none;
+    background-color:gray;
+    opacity: 0.5;
+    width: 100%;
+    padding: 15px;
+    margin-top:10px;
+    font-weight: bold;
+    font-size:18px;
+    color:white;
+    border-radius:5px;
+  }
+ 
+  .playerchoose__btm{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
   }

@@ -1,6 +1,6 @@
-import React,{useState} from 'react'
-import {useStateValue} from "./StateProvider"
-import './Bowlers.css'
+import React from 'react'
+import {useStateValue} from "../StateProvider"
+import '../Styles/Bowlers.css'
 
 function Bowlers({id,name,logo,points,credits}) {
     const [{bowlerss},dispatch]=useStateValue()

@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
-import './Display.css'
-import {useStateValue} from "./StateProvider"
+import '../Styles/Display.css'
+import {useStateValue} from "../StateProvider"
 
 function Batsmanlist({id,name,logo,points,credits}) {
     const[{captains},dispatch]=useStateValue()
@@ -11,9 +11,7 @@ function Batsmanlist({id,name,logo,points,credits}) {
         const t = e.target.checked
         setCaptain(t)
         setVicecaptain(false)
-        let cap = {
-            
-        }
+        
         dispatch({
             type:'ADD_CAPTAINS',
             captains:{

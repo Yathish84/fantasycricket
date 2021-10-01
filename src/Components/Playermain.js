@@ -1,6 +1,6 @@
 import React from 'react'
-import './Display.css'
-import Displayplayers from './Displayplayers'
+import '../Styles/Display.css'
+import Displayplayers from '../Components/Displayplayers'
 import {useHistory} from 'react-router-dom'
 
 function Displaymatches({match}) {

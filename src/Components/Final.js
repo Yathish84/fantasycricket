@@ -2,7 +2,7 @@ import React from 'react'
 import './Tabs.css'
 
 function Final({id,name,logo,points,credits,captain,vicecaptain}) {
-    console.log(id,name,logo,points,credits,captain)    
+     
     return (
         <div className='final'>
                     {captain&&(

@@ -11,6 +11,9 @@ export const initialState={
 
    
 }
+export const creditscalculator=(players)=>{
+   return players.reduce((total,Playerdetails)=>total-Playerdetails.credits,100)
+}
 
 function reducer(state,action) {
     switch(action.type){

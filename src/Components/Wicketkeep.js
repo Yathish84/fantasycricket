@@ -1,13 +1,13 @@
-import React,{useState} from 'react'
-import {useStateValue} from './StateProvider'
-import './Bowlers.css'
+import React from 'react'
+import {useStateValue} from "../StateProvider"
+import '../Styles/Bowlers.css'
 
-function Allround({id,name,logo,points,credits}) {
-    const [{allrounderss},dispatch]=useStateValue()
-    const pd=()=>{
+function Wicketkeep({id,name,logo,points,credits}) {
+    const [{wicketkeeperss},dispatch]=useStateValue()
+    const pd = ()=>{
         dispatch({
-            type:'ADD_ALLROUNDERS',
-            allrounderss:{
+            type:'ADD_WICKETKEEPERS',
+            wicketkeeperss:{
                 id:id,
                 name:name,
                 logo:logo,
@@ -25,10 +25,12 @@ function Allround({id,name,logo,points,credits}) {
                 credits:credits
             },
         })
+      
     }
+   
     return (
         <div className="bowlers">
-        <div className={allrounderss.length>=4 ? "disabled":"bowlers__left"} onClick={pd}>
+        <div className={wicketkeeperss.length>=5 ? "disabled":"bowlers__left"} onClick={pd}>
             <div>
             <img src={logo} alt="" width="20" height="20"/>
             </div>
@@ -46,4 +48,4 @@ function Allround({id,name,logo,points,credits}) {
     )
 }
 
-export default Allround
+export default Wicketkeep

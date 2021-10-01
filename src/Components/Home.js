@@ -1,8 +1,7 @@
-import React,{useEffect,useState} from 'react'
-import './Home.css'
+import React from 'react'
+import '../Styles/Home.css'
 import { useHistory} from 'react-router-dom';
-import authaxios from './Authaxios'
-import {useStateValue} from "./StateProvider"
+import {useStateValue} from "../StateProvider"
 
 function Home({id,match_name,t1_short_name,t2_short_name,t1_image,t2_image,match_type}) {
     const history = useHistory()

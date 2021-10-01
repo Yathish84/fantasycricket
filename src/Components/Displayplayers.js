@@ -1,5 +1,5 @@
 import React from 'react'
-import './Display.css'
+import '../Styles/Display.css'
 
 function Displayplayers({id,name,logo,captain,vicecaptain}) {
     return (
